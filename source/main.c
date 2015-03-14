@@ -5,15 +5,10 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 11:05:19 2015 Valentin Cardon
-** Last update Sat Mar 14 16:11:16 2015 Valentin Cardon
+** Last update Sat Mar 14 21:04:13 2015 Valentin Cardon
 */
 
 # include	"elcrypt.h"
-
-/*
-./elcrypt -d -f source -o output -k key
-./elcrypt -e -f source -o output -k key
-*/
 
 void		print_usage()
 {

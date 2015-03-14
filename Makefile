@@ -5,13 +5,16 @@
 ## Login   <cardon_v@epitech.net>
 ## 
 ## Started on  Sat Mar 14 11:00:30 2015 Valentin Cardon
-## Last update Sat Mar 14 15:36:47 2015 Valentin Cardon
+## Last update Sat Mar 14 21:53:17 2015 Valentin Cardon
 ##
 
 NAME		=	elcrypt
 
 SRC		=	source/main.c		\
-			source/parser.c
+			source/parser.c		\
+			source/init.c		\
+			source/check_struct.c	\
+			source/print_struct.c
 
 OBJ		=	$(SRC:.c=.o)
 
