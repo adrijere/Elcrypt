@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 **
 ** Started on  Sat Mar 14 15:32:00 2015 Valentin Cardon
-** Last update Sun Mar 15 18:14:04 2015 Jérémy MATHON
+** Last update Sun Mar 15 18:23:03 2015 Jérémy MATHON
 */
 
 # include	"elcrypt.h"
