@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 21:09:15 2015 Valentin Cardon
-** Last update Sat Mar 14 23:40:52 2015 Valentin Cardon
+** Last update Sun Mar 15 01:07:03 2015 Valentin Cardon
 */
 
 #include	"elcrypt.h"
@@ -44,8 +44,7 @@ int		check_file(t_parser *p, t_file *f)
   if ((f->fd_in = open(p->name_out, O_CREAT | O_RDWR | O_TRUNC, 0644)) == -1)
     {
       printf("Wrong parameters:\n");
-      printf("Their is an error with \"%s\" output file\n",
-	     p->name_out);
+      printf("There is no [-o] output file\n");
       return (-1);
     }
   return (0);
@@ -53,7 +52,14 @@ int		check_file(t_parser *p, t_file *f)
 
 int		check_key(t_parser *parser)
 {
-  (void)parser;
+  if (parser->key != 1)
+    {
+      printf("Wrong parameters:\n");
+      printf("There is no [-k] key for the operation\n");
+      return (-1);
+    }
+  if ((parser->key_prim = get_key_prim(parser)) == NULL)
+    return (-1);
   return (0);
 }
 

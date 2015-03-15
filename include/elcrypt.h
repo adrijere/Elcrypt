@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 11:08:00 2015 Valentin Cardon
-** Last update Sat Mar 14 23:56:22 2015 Valentin Cardon
+** Last update Sun Mar 15 01:14:37 2015 Valentin Cardon
 */
 
 #ifndef		_ELCRYPT_H_
@@ -18,6 +18,13 @@
 #include	<fcntl.h>
 #include	<string.h>
 
+typedef	union	u_key
+{
+  unsigned int	iint[2];
+  unsigned char	cchar[8];
+  unsigned long	llong;
+}		u_key;
+
 typedef struct	s_parser
 {
   int		decrypt;
@@ -28,6 +35,8 @@ typedef struct	s_parser
   char		*name_in;
   char		*name_out;
   char		*key_string;
+  u_key		*key_prim;
+  u_key		*key_second;
 }		t_parser;
 
 typedef struct	s_file
@@ -40,6 +49,7 @@ t_parser	*init_parser();
 t_file		*init_file();
 t_parser	*parser(char **);
 int		check_struct(t_parser *, t_file *);
+u_key		*get_key_prim(t_parser *);
 void		print_struct(t_parser *);
 
 #endif		/* _ELCRYPT_H_ */
