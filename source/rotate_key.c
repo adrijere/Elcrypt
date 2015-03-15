@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sun Mar 15 17:32:28 2015 Valentin Cardon
-** Last update Sun Mar 15 17:57:06 2015 Valentin Cardon
+** Last update Sun Mar 15 17:59:30 2015 Valentin Cardon
 */
 
 #include	"elcrypt.h"
@@ -27,11 +27,11 @@ void		rotate_decrypt(u_key *key_prim, u_key *key_sec, int i)
   unsigned long	ttmp;
 
   key_sec->llong = key_prim->llong;
-  while (n > 1)
+  while (i > 1)
     {
       tmp = (key_sec->llong << 4);
-      ttmp = (key_sec->llon >>(56 - 4));
+      ttmp = (key_sec->llong >> (56 - 4));
       key_sec->llong = tmp | ttmp;
-      nn--;
+      i--;
     }
 }
