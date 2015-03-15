@@ -1,11 +1,11 @@
 /*
 ** check_struct.c for elcrypt in /home/cardon_v/Documents/PSU/elcrypt/source
-** 
+**
 ** Made by Valentin Cardon
 ** Login   <cardon_v@epitech.net>
-** 
+**
 ** Started on  Sat Mar 14 21:09:15 2015 Valentin Cardon
-** Last update Sun Mar 15 01:07:03 2015 Valentin Cardon
+** Last update Sun Mar 15 17:36:31 2015 Jérémy MATHON
 */
 
 #include	"elcrypt.h"

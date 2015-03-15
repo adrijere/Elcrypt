@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 11:08:00 2015 Valentin Cardon
-** Last update Sun Mar 15 01:19:17 2015 Valentin Cardon
+** Last update Sun Mar 15 17:13:28 2015 Jérémy MATHON
 */
 
 #ifndef		_ELCRYPT_H_
@@ -24,6 +24,12 @@ typedef	union	u_key
   unsigned char	cchar[8];
   unsigned long	llong;
 }		u_key;
+
+typedef	union		u_bloc
+{
+  unsigned	int	_flag[2];
+  unsigned	char	_char[8];
+}			ubloc;
 
 typedef struct	s_parser
 {
