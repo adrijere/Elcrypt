@@ -1,11 +1,11 @@
 /*
 ** parser.c for elcrypt in /home/cardon_v/Documents/PSU/elcrypt/source
-** 
+**
 ** Made by Valentin Cardon
 ** Login   <cardon_v@epitech.net>
-** 
+**
 ** Started on  Sat Mar 14 15:32:00 2015 Valentin Cardon
-** Last update Sun Mar 15 00:16:24 2015 Valentin Cardon
+** Last update Sun Mar 15 17:44:34 2015 Jérémy MATHON
 */
 
 # include	"elcrypt.h"
@@ -56,6 +56,8 @@ t_parser	*parser(char **av)
   parser = put_in_struct(av, parser);
   print_struct(parser);
   if (check_struct(parser, file) == -1)
+    return (NULL);
+  if ((check_mode(parser, file)) == -1)
     return (NULL);
   return (parser);
 }

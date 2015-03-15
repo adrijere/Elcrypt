@@ -1,11 +1,11 @@
 /*
 ** main.c for elcrypt in /home/cardon_v/Documents/PSU/elcrypt/source
-** 
+**
 ** Made by Valentin Cardon
 ** Login   <cardon_v@epitech.net>
-** 
+**
 ** Started on  Sat Mar 14 11:05:19 2015 Valentin Cardon
-** Last update Sat Mar 14 21:04:13 2015 Valentin Cardon
+** Last update Sun Mar 15 17:35:39 2015 Jérémy MATHON
 */
 
 # include	"elcrypt.h"
@@ -19,7 +19,7 @@ void		print_usage()
   printf("\t-o [FILE]\tOutput result file\n");
   printf("\t-k [KEY]\tPrimary key in 64bits\n\n");
   printf("Exemple:\n");
-  printf("./elcrypt [-d]/[-e] [-f] [SOURCE] [-o] [FILE] [-k] [key]\n");  
+  printf("./elcrypt [-d]/[-e] [-f] [SOURCE] [-o] [FILE] [-k] [key]\n");
   printf("Decrypt/encrypt [SOURCE] file in [FILE] with the [KEY] key\n");
 }
 
