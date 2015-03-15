@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 11:08:00 2015 Valentin Cardon
-** Last update Sun Mar 15 01:14:37 2015 Valentin Cardon
+** Last update Sun Mar 15 01:19:17 2015 Valentin Cardon
 */
 
 #ifndef		_ELCRYPT_H_
@@ -36,7 +36,6 @@ typedef struct	s_parser
   char		*name_out;
   char		*key_string;
   u_key		*key_prim;
-  u_key		*key_second;
 }		t_parser;
 
 typedef struct	s_file

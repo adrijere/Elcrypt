@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 21:49:52 2015 Valentin Cardon
-** Last update Sun Mar 15 01:03:18 2015 Valentin Cardon
+** Last update Sun Mar 15 01:19:12 2015 Valentin Cardon
 */
 
 #include	"elcrypt.h"
@@ -23,7 +23,6 @@ t_parser	*init_parser()
   tmp->name_out = NULL;
   tmp->key_string = NULL;
   tmp->key_prim = NULL;
-  tmp->key_second = NULL;
   return (tmp);
 }
 
