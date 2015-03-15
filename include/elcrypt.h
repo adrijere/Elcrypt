@@ -5,18 +5,19 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Sat Mar 14 11:08:00 2015 Valentin Cardon
-** Last update Sun Mar 15 17:13:28 2015 Jérémy MATHON
+** Last update Sun Mar 15 18:14:24 2015 Jérémy MATHON
 */
 
 #ifndef		_ELCRYPT_H_
 #define		_ELCRYPT_H_
 
-#include	<stdio.h>
-#include	<stdlib.h>
-#include	<sys/types.h>
-#include	<sys/stat.h>
-#include	<fcntl.h>
-#include	<string.h>
+# include	<stdio.h>
+# include	<stdlib.h>
+# include	<sys/types.h>
+# include	<sys/stat.h>
+# include	<fcntl.h>
+# include	<string.h>
+# include	<unistd.h>
 
 typedef	union	u_key
 {
@@ -29,7 +30,7 @@ typedef	union		u_bloc
 {
   unsigned	int	_flag[2];
   unsigned	char	_char[8];
-}			ubloc;
+}			u_bloc;
 
 typedef struct	s_parser
 {
@@ -55,6 +56,9 @@ t_file		*init_file();
 t_parser	*parser(char **);
 int		check_struct(t_parser *, t_file *);
 u_key		*get_key_prim(t_parser *);
-void		print_struct(t_parser *);
-
+void		rotate_crypt(u_key *);
+void		rotate_decrypt(u_key *, u_key *, int);
+void		my_decrypt(t_parser *, t_file *);
+void		my_crypt(t_parser *, t_file *);
+int		check_mode(t_parser *, t_file *);
 #endif		/* _ELCRYPT_H_ */

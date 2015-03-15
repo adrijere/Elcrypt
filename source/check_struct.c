@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 **
 ** Started on  Sat Mar 14 21:09:15 2015 Valentin Cardon
-** Last update Sun Mar 15 17:36:31 2015 Jérémy MATHON
+** Last update Sun Mar 15 18:13:49 2015 Jérémy MATHON
 */
 
 #include	"elcrypt.h"
@@ -41,7 +41,7 @@ int		check_file(t_parser *p, t_file *f)
       printf("File \"%s\" doesn't exist\n", p->name_in);
       return (-1);
     }
-  if ((f->fd_in = open(p->name_out, O_CREAT | O_RDWR | O_TRUNC, 0644)) == -1)
+  if ((f->fd_out = open(p->name_out, O_CREAT | O_RDWR | O_TRUNC, 0644)) == -1)
     {
       printf("Wrong parameters:\n");
       printf("There is no [-o] output file\n");

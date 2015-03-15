@@ -5,7 +5,7 @@
 ** Login   <mathon_j@mathonj>
 **
 ** Started on  Sun Mar 15 17:33:46 2015 Jérémy MATHON
-** Last update Sun Mar 15 17:55:26 2015 Jérémy MATHON
+** Last update Sun Mar 15 18:06:16 2015 Jérémy MATHON
 */
 
 #include	"elcrypt.h"
@@ -38,7 +38,7 @@ static void	algo_decrypt(t_parser *parser, char *buf, int ret, t_file *file)
     {
       rotate_decrypt(&tmp, parser->key_prim, i);
       flag_tmp[1] = bloc._flag[1];
-      flag_tmp[0] = (tmp.my_int[0] ^ bloc._flag[1]) ^ bloc._flag[0];
+      flag_tmp[0] = (tmp.iint[0] ^ bloc._flag[1]) ^ bloc._flag[0];
       bloc._flag[0] = flag_tmp[1];
       bloc._flag[1] = flag_tmp[0];
       i--;

@@ -5,7 +5,7 @@
 ** Login   <mathon_j@mathonj>
 **
 ** Started on  Sun Mar 15 16:05:30 2015 Jérémy MATHON
-** Last update Sun Mar 15 17:38:04 2015 Jérémy MATHON
+** Last update Sun Mar 15 18:06:00 2015 Jérémy MATHON
 */
 
 #include	"elcrypt.h"
@@ -30,7 +30,7 @@ static void		algo_crypt(t_parser *parser, char *str, t_file *file)
   unsigned int		flag_tmp[2];
 
   i = 0;
-  get_bloc(buff, &bloc);
+  get_bloc(str, &bloc);
   tmp.llong = parser->key_prim->llong;
   flag_tmp[0] = bloc._flag[0];
   bloc._flag[0] = bloc._flag[1];
@@ -51,7 +51,7 @@ static void		algo_crypt(t_parser *parser, char *str, t_file *file)
 
 void		my_crypt(t_parser *parser, t_file *file)
 {
-  int		red;
+  int		ret;
   char		buf[8];
   int		tmp;
 

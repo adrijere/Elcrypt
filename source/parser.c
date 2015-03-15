@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 **
 ** Started on  Sat Mar 14 15:32:00 2015 Valentin Cardon
-** Last update Sun Mar 15 17:44:34 2015 Jérémy MATHON
+** Last update Sun Mar 15 18:14:04 2015 Jérémy MATHON
 */
 
 # include	"elcrypt.h"
@@ -54,7 +54,6 @@ t_parser	*parser(char **av)
   parser = init_parser();
   file = init_file();
   parser = put_in_struct(av, parser);
-  print_struct(parser);
   if (check_struct(parser, file) == -1)
     return (NULL);
   if ((check_mode(parser, file)) == -1)
